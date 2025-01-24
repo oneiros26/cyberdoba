@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cyber Doba</title>
+    <link
+      rel="stylesheet"
+      href="https://api.ssps.cajthaml.eu/file/64d9f18f79dad891e8a07c73"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+      body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        font-family: "Inter", sans-serif;
+        background-color: #0d1117;
+        color: grey;
+        letter-spacing: 2px;
+      }
+
+      .main-container {
+        display: flex;
+        width: 1000px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: center;
+        background-color: #1f2631;
+        width: 100%;
+      }
+
+      header {
+        width: 1000px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        letter-spacing: 0;
+      }
+
+      header > .title {
+        display: flex;
+        align-items: center;
+      }
+
+      header img {
+        height: 55px;
+      }
+
+      header h2 {
+        color: #57a6ff;
+        font-size: 37px;
+        font-weight: bold;
+      }
+
+      header > ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+      }
+
+      header ul li {
+        margin: 8px;
+      }
+
+      header ul li:last-child {
+        background-color: #26943c;
+        padding: 10px;
+        color: whitesmoke;
+        font-weight: 500;
+        margin: 0;
+        margin-left: 8px;
+      }
+
+      main {
+        background-color: #14181f;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 10px 30px 10px #14181f;
+      }
+      main nav {
+        width: 100%;
+      }
+      nav ul {
+        display: flex;
+        flex-direction: row;
+        color: whitesmoke;
+      }
+      main ul li {
+        padding: 26px;
+        width: 100%;
+        text-align: center;
+      }
+
+      main ul li:first-child {
+        background-color: #222222;
+      }
+
+      main ul li:nth-child(2) {
+        background-color: #333333;
+      }
+
+      main ul li:nth-child(3) {
+        background-color: #444444;
+      }
+
+      main ul li:last-child {
+        background-color: #555555;
+      }
+
+      .image-copyright {
+        background-color: #161b22;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-top: solid 4px #0d1117;
+        border-bottom: solid 4px #0d1117;
+        width: 100%;
+      }
+
+      article .main-article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      article .main-article h2 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 50px;
+        color: #57a6ff;
+        padding: 40px;
+        letter-spacing: 4px;
+      }
+
+      article .line-separator {
+        width: 200px;
+        height: 4px;
+        background-color: #393a3c;
+        margin: -30px 0 40px 0;
+      }
+
+      article .main-article p {
+        text-align: center;
+        padding: 0 40px 80px 40px;
+        font-size: 22px;
+        font-weight: 400;
+      }
+
+      article .main-boxes {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        align-items: stretch;
+        background-color: #161b22;
+        padding: 40px;
+      }
+
+      .main-boxes section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main-boxes .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+        font-size: 30px;
+        margin: 15px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+      }
+
+      .main-boxes .blue {
+        border: solid 4px #57a6ff;
+      }
+
+      .main-boxes .green {
+        border: solid 4px #238636;
+      }
+
+      .main-boxes h3 {
+        font-size: 22px;
+        font-weight: 700;
+        padding: 0 10px 0 10px;
+      }
+
+      .main-boxes p {
+        padding: 20px;
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      .main-boxes section:nth-child(n) {
+        color: #57a6ff;
+        border: solid 3px #57a6ff;
+        width: 20%;
+        margin: 5px;
+      }
+
+      .main-boxes section:nth-child(2n) {
+        color: #238636;
+        border: solid 3px #238636;
+        width: 20%;
+        margin: 5px;
+      }
+
+      main aside {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        align-items: center;
+      }
+
+      main aside p {
+        color: #57a6ff;
+        margin: 40px 40px 20px 40px;
+        font-weight: 700;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      main aside p:last-child {
+        color: grey;
+        font-weight: 500;
+        font-size: 22px;
+        align-self: flex-end;
+        margin-right: 100px;
+      }
+
+      main aside span {
+        font-weight: 700;
+        font-size: 60px;
+      }
+
+      footer {
+        display: flex;
+        width: 100%;
+      }
+
+      footer > nav {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+      }
+
+      footer > nav h4 {
+        color: #9dafaf;
+        font-weight: 900;
+        font-size: 22px;
+        padding: 60px 20px 20px 0;
+      }
+
+      footer > nav .footer-box-one {
+        display: flex;
+        flex-direction: column;
+      }
+
+      footer > nav .footer-box-two {
+        display: flex;
+        flex-direction: column;
+      }
+
+      footer > nav .footer-box-three {
+        display: flex;
+        flex-direction: column;
+        color: #9dafaf;
+        font-weight: 700;
+        font-size: 17px;
+      }
+
+      footer > nav .footer-box-three .copyright {
+        padding: 30px 0 30px 0;
+        color: grey;
+        font-size: 15px;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-container">
+      <header>
+        <div class="title">
+          <img
+            src="https://api.ssps.cajthaml.eu/file/674091dc91831b4e06c6f65c"
+            class="logo"
+          />
+          <h2>CyberCorp</h2>
+        </div>
+        <ul>
+          <li>Zpravy z podsveti</li>
+          <li>Kybernetika</li>
+          <li>Hackerska elita</li>
+          <li>Casto hackovane otazky</li>
+          <li>PRIPOJIT SE</li>
+        </ul>
+      </header>
+    </div>
+    <div class="main-container">
+      <main>
+        <nav>
+          <ul>
+            <li>PREZITI</li>
+            <li>KYBERZBRANE</li>
+            <li>SITOVE VALKY</li>
+            <li>DIGITALNI UTOPIE</li>
+          </ul>
+        </nav>
+        <img
+          src="https://api.ssps.cajthaml.eu/file/6740920a91831b4e06c6fb1a"
+          class="main-background"
+        />
+        <div class="image-copyright">
+          <p>2126 &copy; CyberCorp - Vsechna prava zasifrovana</p>
+        </div>
+        <article>
+          <section class="main-article">
+            <h2>DIGITALNI NOC</h2>
+            <div class="line-separator"></div>
+            <p>
+              V roce 2126 se svet rozdelil na osvicene megamesta a temne
+              digitalni pustiny. Lide hledaji bezpeci pod vrstvou holografickych
+              mrakodrapu, zatimco kyberneticti rebelove bojuji za svobodu na
+              podvratnych sitich. <br /><br />
+              Kazdodenni zivot je propojen s neuralnimi implantaty, ale pod
+              jejich lesklou fasadou se skryva boj o kontrolu nad myslenkami.
+              Hackeri na kazdem rohu upravuji realitu, manipuluji s daty a meni
+              svet v nepretrzity digitalni chaos. <br /><br />
+              Kyberkultura je zivot. Kyberneticka valka je nevyhnutelna. Ale
+              jedine, co zustava jiste, je nekoncici touha po svobode.
+            </p>
+          </section>
+          <section class="main-boxes">
+            <section>
+              <div class="icon blue">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <h3>AI ROZVOJ</h3>
+              <p>
+                Kyberumelci posouvaji hranice kreativity ve spojeni s umelou
+                inteligenci.
+              </p>
+            </section>
+            <section>
+              <div class="icon green">
+                <i class="fa-solid fa-key"></i>
+              </div>
+              <h3>BEZPECNOST</h3>
+              <p>
+                Data jsou menou. Vase soukromi? Iluze v rukou megakorporaci.
+              </p>
+            </section>
+            <section>
+              <div class="icon blue">
+                <i class="fa-solid fa-glasses"></i>
+              </div>
+              <h3>BUDOUCNOST</h3>
+              <p>
+                Nova era zacina ve virtualnim svete - realita ztraci vyznam.
+              </p>
+            </section>
+            <section>
+              <div class="icon green">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+              <h3>KYBERSITE</h3>
+              <p>Pripojte se. Budte soucasti boje za svobodu na darknetu.</p>
+            </section>
+          </section>
+        </article>
+        <aside>
+          <p>
+            <span>„</span> Vsechno je data. Nezalezi na tom, co je
+            skutecne.<span> “</span>
+          </p>
+          <p>- CyberProphet</p>
+        </aside>
+      </main>
+      <footer>
+        <nav>
+          <div class="footer-box-one">
+            <h4>O nas</h4>
+            <p>
+              CyberCorp je nejvetsi sitova komunita, ktera <br />propojuje mysl
+              a budoucnost.
+            </p>
+          </div>
+          <div class="footer-box-two">
+            <h4>Kontakt</h4>
+            <p>info@cybercorp.net<br /><br />+420 284 016 666</p>
+          </div>
+          <div class="footer-box-three">
+            <h4>Informace</h4>
+            <p class="footer-text">
+              PODPORA<br /><br />TECHNOLOGIE<br /><br />HACKERSKA AKADEMIE
+            </p>
+            <p class="copyright">2126 &copy; CyberCorp</p>
+          </div>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<!-- Zdroje 
+https://stackoverflow.com/questions/4561097/css-box-shadow-bottom-only
+https://chatgpt.com/share/67536772-9b78-8000-ba79-4054e5a1a5c6
+https://stackoverflow.com/questions/13786971/make-a-font-more-condensed-with-css
+
+-->
