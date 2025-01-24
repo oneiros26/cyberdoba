@@ -2,6 +2,7 @@
 <html lang="cs">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber Doba</title>
     <link
       rel="stylesheet"
@@ -39,6 +40,7 @@
         justify-content: center;
         background-color: #1f2631;
         width: 100%;
+        height: 75px;
       }
 
       header {
@@ -53,10 +55,13 @@
       header > .title {
         display: flex;
         align-items: center;
+        height: 100%;
+        width: auto;
       }
 
       header img {
-        height: 55px;
+        height: 100%;
+        width: auto;
       }
 
       header h2 {
@@ -106,6 +111,9 @@
         padding: 26px;
         width: 100%;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       main ul li:first-child {
@@ -122,6 +130,11 @@
 
       main ul li:last-child {
         background-color: #555555;
+      }
+
+      .main-background {
+        width: 100%;
+        height: auto;
       }
 
       .image-copyright {
@@ -166,13 +179,15 @@
       }
 
       article .main-boxes {
+        width: 100%;
         display: flex;
         flex-direction: row;
         text-align: center;
         justify-content: center;
         align-items: stretch;
         background-color: #161b22;
-        padding: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
       }
 
       .main-boxes section {
@@ -229,17 +244,21 @@
 
       main aside {
         display: flex;
-        flex-direction: column;
-        width: 70%;
+        width: 100%;
         align-items: center;
+        justify-content: center;
+      }
+
+      .quote-container {
+        display: flex;
+        flex-direction: column;
       }
 
       main aside p {
         color: #57a6ff;
-        margin: 40px 40px 20px 40px;
+        margin: 40px 40px 10px 40px;
         font-weight: 700;
-        font-size: 30px;
-        text-align: center;
+        font-size: 25px;
       }
 
       main aside p:last-child {
@@ -247,12 +266,12 @@
         font-weight: 500;
         font-size: 22px;
         align-self: flex-end;
-        margin-right: 100px;
+        margin-bottom: 20px;
       }
 
       main aside span {
         font-weight: 700;
-        font-size: 60px;
+        font-size: 50px;
       }
 
       footer {
@@ -298,6 +317,35 @@
         font-size: 15px;
         font-weight: 400;
       }
+
+
+      @media (min-width: 900px) and (max-width: 1200px) {
+        .main-container {
+          width: 800px;
+        }
+        header {
+          width: 800px;
+        }
+      }
+
+      @media (min-width: 600px) and (max-width: 900px) {
+        .main-container {
+          width: 500px;
+        }
+        header {
+          width: 500px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .main-container {
+          width: 320px;
+        }
+        header {
+          width: 320px;
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -392,11 +440,13 @@
           </section>
         </article>
         <aside>
-          <p>
-            <span>„</span> Vsechno je data. Nezalezi na tom, co je
-            skutecne.<span> “</span>
-          </p>
-          <p>- CyberProphet</p>
+          <div class="quote-container">
+            <p>
+              <span>„</span> Vsechno je data. Nezalezi na tom, co je
+              skutecne.<span>“</span>
+            </p>
+            <p>- CyberProphet</p>
+          </div>
         </aside>
       </main>
       <footer>
