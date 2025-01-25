@@ -25,12 +25,13 @@
         font-family: "Inter", sans-serif;
         background-color: #0d1117;
         color: grey;
-        letter-spacing: 2px;
+        letter-spacing: 1.5px;
+        line-height: 1.2;
       }
 
       .main-container {
         display: flex;
-        width: 1000px;
+        width: 70%;
         flex-direction: column;
         align-items: center;
       }
@@ -40,11 +41,11 @@
         justify-content: center;
         background-color: #1f2631;
         width: 100%;
-        height: 75px;
+        height: clamp(3rem, 3.9vw, 5rem)
       }
 
       header {
-        width: 1000px;
+        width: 70%;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -56,18 +57,19 @@
         display: flex;
         align-items: center;
         height: 100%;
-        width: auto;
+        width: 24%;
       }
 
       header img {
-        height: 100%;
-        width: auto;
+        height: auto;
+        width: clamp(1.8rem, 100%, 5rem);
       }
 
       header h2 {
         color: #57a6ff;
-        font-size: 37px;
+        font-size: clamp(1.2rem, 2.2vw, 5rem);
         font-weight: bold;
+        margin-left: 6px;
       }
 
       header > ul {
@@ -75,20 +77,33 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        font-size: 16px;
+        font-size: clamp(0.75rem, 1vw, 1rem);
       }
 
       header ul li {
-        margin: 8px;
+        margin: 0.5vw;
       }
 
       header ul li:last-child {
         background-color: #26943c;
-        padding: 10px;
+        padding: 0.5vw;
         color: whitesmoke;
         font-weight: 500;
         margin: 0;
-        margin-left: 8px;
+        margin-left: 0.4vw;
+      }
+
+      .hamburger {
+        font-weight: 900;
+        transform: rotate(90deg);
+        font-size: 1.5rem;
+        display: none;
+        color: rgb(198, 198, 198);
+      }
+
+      .hamburger:hover {
+        color: #57a6ff;
+        cursor: pointer;
       }
 
       main {
@@ -105,30 +120,32 @@
       nav ul {
         display: flex;
         flex-direction: row;
+        flex-direction: row;
         color: whitesmoke;
       }
-      main ul li {
-        padding: 26px;
+      nav ul li {
+        padding: 1.8vw;
         width: 100%;
         text-align: center;
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: clamp(0.8rem, 1.2vw, 2rem);
       }
 
-      main ul li:first-child {
+      nav ul li:first-child {
         background-color: #222222;
       }
 
-      main ul li:nth-child(2) {
+      nav ul li:nth-child(2) {
         background-color: #333333;
       }
 
-      main ul li:nth-child(3) {
+      nav ul li:nth-child(3) {
         background-color: #444444;
       }
 
-      main ul li:last-child {
+      nav ul li:last-child {
         background-color: #555555;
       }
 
@@ -147,6 +164,7 @@
         border-top: solid 4px #0d1117;
         border-bottom: solid 4px #0d1117;
         width: 100%;
+        font-size: clamp(0.5rem, 1vw, 2rem);
       }
 
       article .main-article {
@@ -158,7 +176,7 @@
       article .main-article h2 {
         text-align: center;
         font-weight: bold;
-        font-size: 50px;
+        font-size: clamp(2rem, 2.5vw, 5rem);
         color: #57a6ff;
         padding: 40px;
         letter-spacing: 4px;
@@ -174,8 +192,9 @@
       article .main-article p {
         text-align: center;
         padding: 0 40px 80px 40px;
-        font-size: 22px;
+        font-size: clamp(1rem, 1.2vw, 2rem);
         font-weight: 400;
+        letter-spacing: 1px;
       }
 
       article .main-boxes {
@@ -217,15 +236,18 @@
       }
 
       .main-boxes h3 {
-        font-size: 22px;
-        font-weight: 700;
+        font-size: clamp(1rem, 1.5vw, 3rem);
+        letter-spacing: normal;
+        font-weight: 800;
         padding: 0 10px 0 10px;
       }
 
       .main-boxes p {
         padding: 20px;
         font-weight: 500;
-        font-size: 18px;
+        font-size: clamp(1rem, 1vw, 2rem);
+        line-height: 1;
+        letter-spacing: 1px;
       }
 
       .main-boxes section:nth-child(n) {
@@ -256,22 +278,24 @@
 
       main aside p {
         color: #57a6ff;
-        margin: 40px 40px 10px 40px;
+        margin: 40px 40px 0 40px;
         font-weight: 700;
-        font-size: 25px;
+        font-size: clamp(1.3rem, 1.7vw, 4rem);
+        letter-spacing: normal;
       }
 
       main aside p:last-child {
         color: grey;
         font-weight: 500;
-        font-size: 22px;
+        font-size: clamp(0.75rem, 1.2vw, 2rem);
+        letter-spacing: normal;
         align-self: flex-end;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
       }
 
       main aside span {
         font-weight: 700;
-        font-size: 50px;
+        font-size: clamp(2rem, 3.5vw, 5rem);
       }
 
       footer {
@@ -289,18 +313,20 @@
       footer > nav h4 {
         color: #9dafaf;
         font-weight: 900;
-        font-size: 22px;
+        font-size: clamp(1rem, 1.4vw, 3rem);
         padding: 60px 20px 20px 0;
       }
 
       footer > nav .footer-box-one {
         display: flex;
         flex-direction: column;
+        font-size: clamp(0.75rem, 1.1vw, 2rem);
       }
 
       footer > nav .footer-box-two {
         display: flex;
         flex-direction: column;
+        font-size: clamp(0.75rem, 1.1vw, 2rem);
       }
 
       footer > nav .footer-box-three {
@@ -308,44 +334,59 @@
         flex-direction: column;
         color: #9dafaf;
         font-weight: 700;
-        font-size: 17px;
+        font-size: clamp(0.7rem, 1vw, 2rem);
       }
 
       footer > nav .footer-box-three .copyright {
         padding: 30px 0 30px 0;
         color: grey;
-        font-size: 15px;
+        font-size: clamp(0.5rem, 0.8vw, 1rem);
         font-weight: 400;
       }
 
-
-      @media (min-width: 900px) and (max-width: 1200px) {
-        .main-container {
-          width: 800px;
+      @media (max-width: 1000px) {
+        header > ul {
+          display: none;
         }
-        header {
-          width: 800px;
-        }
-      }
-
-      @media (min-width: 600px) and (max-width: 900px) {
-        .main-container {
-          width: 500px;
-        }
-        header {
-          width: 500px;
+        .hamburger
+        {
+          display: block;
         }
       }
 
-      @media (max-width: 600px) {
-        .main-container {
-          width: 320px;
+      @media (max-width: 900px) {
+        article .main-boxes {
+          flex-direction: column;
+          align-items: center;
         }
-        header {
-          width: 320px;
+
+        .main-boxes section:nth-child(n) {
+          width: 80%;
+          margin: 5px;
+        }
+
+        .main-boxes section:nth-child(2n) {
+          width: 80%;
+          margin: 5px;
         }
       }
 
+      @media (max-width: 800px){
+        nav ul {
+          flex-direction: column;
+        }
+        nav ul li {
+          padding: 0;
+          padding-top: 1.8vw;
+          padding-bottom: 1.8vw;
+        }
+      }
+
+      @media (max-width: 650px) {
+        footer > nav {
+          flex-direction: column;
+        }
+      }
     </style>
   </head>
   <body>
@@ -365,6 +406,7 @@
           <li>Casto hackovane otazky</li>
           <li>PRIPOJIT SE</li>
         </ul>
+        <div class="hamburger">|||</div>
       </header>
     </div>
     <div class="main-container">
@@ -443,7 +485,7 @@
           <div class="quote-container">
             <p>
               <span>„</span> Vsechno je data. Nezalezi na tom, co je
-              skutecne.<span>“</span>
+              skutecne. <span>“</span>
             </p>
             <p>- CyberProphet</p>
           </div>
@@ -479,5 +521,5 @@
 https://stackoverflow.com/questions/4561097/css-box-shadow-bottom-only
 https://chatgpt.com/share/67536772-9b78-8000-ba79-4054e5a1a5c6
 https://stackoverflow.com/questions/13786971/make-a-font-more-condensed-with-css
-
+https://www.w3schools.com/cssref/pr_dim_line-height.php
 -->
